@@ -1,0 +1,12 @@
+/*
+*/
+
+SMC {	
+DivisionManager "[SetIP]",15880
+}
+
+ModulePatch
+{
+	SrcPath	".\Patch_Internal"
+	DestPath ".\Patch_Internal_Comp"
+}

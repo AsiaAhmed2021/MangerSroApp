@@ -1,0 +1,36 @@
+{
+  "ServerName": "AsiaSro",
+  "IP": "192.168.1.9",
+  "Port_IIS": "4282",
+  "ExpRatio": "5000",
+  "ExpRatioParty": "5000",
+  "DropItemRatio": "5000",
+  "DropGoldAmountCoef": "6000",
+  "USER_LIMIT": "100",
+  "levelCap": "100",
+  "petLevelCap": "100",
+  "masteryCap": "300",
+  "exchangeGoldLimit": "10000000000",
+  "stallGoldLimit": "10000000000",
+  "MaxPlayerInServer":"2000",
+  "sql": {
+    "Host": "DESKTOP-5H87KA2@@@SQLEXPRESS",
+    "Password": "amir2011.",
+    "User": "TheRock"
+  },
+  "tableName": {
+    "VsroSharad": "VSRO_SHARD",
+    "VsroAccount": "VSRO_Account",
+    "VsroLog": "VSRO_LOG"
+  },
+  "fixes": {
+    "disableDumps": "1",
+    "fixRates": "1",
+    "disableGreenBook": "1"
+  },
+  "miscini" : {
+	"disableMsg":"0",
+	"disableLog":"0",
+	"disableBsobjMsgbox":"0"
+  }
+}

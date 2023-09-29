@@ -1,0 +1,11 @@
+[sqlAcc]
+sqlHostDB=[Host]@[VsroAccount]
+accDB=[VsroAccount]
+sqlUser=[User]
+sqlPass=[PassWorld]
+
+[sqlShard]
+sqlHostDB=[Host]@[VsroSharad]
+shardDB=[VsroSharad]
+sqlUser=[User]
+sqlPass=[PassWorld]

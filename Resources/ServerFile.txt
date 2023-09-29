@@ -1,0 +1,101 @@
+Common {
+	debug_option_debugger_present {
+		DEBUG_OPTION_ASSERT_SHOW_MESSAGEBOX_OKCANCEL,
+		DEBUG_OPTION_ASSERT_ADVANCE_BREAK,
+		DEBUG_OPTION_ASSERT_CANCEL_EXIT
+	}
+	debug_option_stand_alone {			
+		DEBUG_OPTION_ASSERT_DONOT_SHOW_MESSAGEBOX ,
+		DEBUG_OPTION_ASSERT_WRITE_MINIDUMP
+	}
+	netengine_debug_option_debugger_present	{
+		DEBUG_OPTION_ASSERT_DONOT_SHOW_MESSAGEBOX ,
+		DEBUG_OPTION_ASSERT_WRITE_MINIDUMP
+	}
+	netengine_debug_option_stand_alone	{
+		DEBUG_OPTION_ASSERT_DONOT_SHOW_MESSAGEBOX ,
+		DEBUG_OPTION_ASSERT_WRITE_MINIDUMP 
+	}
+	GlobalManager {
+		Certification 				"[SetIP]", 32000
+		LoginFailureTolerance		5
+		IBUVFailureTolerance		5
+		LoginFailureBlockTimeMin	10
+		IBUVFailureBlockTimeMin		10
+		AutomatedPunisher			"AutomatedPunisher"
+		LoginPunishmentGuide		"You are enter the wrong password three times. And 10 minutes blocked."	        // password Error Message
+		LoginPunishmentDescription	"You are enter the wrong password three times. And 10 minutes blocked."	        // password Error Message
+		IBUVPunishmentGuide		"You are enter the wrong image validation three times. And 10 minutes blocked."	// Image Invaidation Error Message
+		IBUVPunishmentDescription	"You are enter the wrong image validation three times. And 10 minutes blocked."	// Image Invaidation Error Message
+		NetCafeIPRefreshTime		3
+		MaxUserForNonePCBangIP		3
+	}
+	GatewayServer {
+		LastFullVersion_SR_Client 	2
+		Certification 				"[SetIP]", 15880
+		IBUVQueueReserveCount		20000
+		IBUVQueuePrepareRatio		0.05
+		IBUVFailureIPTolerance		0
+		IBUVStringSize				0
+		IBUVCharacterSet			"ABCDEFGHLMNQRTabdehimn2345678"
+		MsgCountOfDumpTrigger					0
+		MsgDumpTriggerElapseTick					0
+	}
+	DownloadServer {
+		Certification 				"[SetIP]", 15880
+		USER_LIMIT					[USER_LIMIT]
+	}
+	FarmManager {
+		Certification 				"[SetIP]", 15880 
+	}
+	MachineManager {
+		Certification 				"[SetIP]", 15880
+	}
+	AgentServer {
+		Certification 				"[SetIP]", 15882
+		CERTIFICATION_IP_BIND 		"[SetIP]"
+		GameGuardMode 								0
+		GameGuardTimerCycle 						5
+		traffic_filter_activity 					service_off
+		traffic_filter_packet_count 				900
+		traffic_filter_check_perid 					900
+	}
+	SR_GameServer {
+		Certification 				"[SetIP]", 15882
+		ExpRatio             		[ExpRatio]
+		ExpRatioParty        		[ExpRatioParty]
+		DropItemRatio       		[DropItemRatio]
+		DropGoldAmountCoef   		[DropGoldAmountCoef]
+		LOCALE 						LOCALE_ENGLISH
+		SET_FEE_RATE           		"0,5,5,5"
+		SELL_FEE_RATE           	"0,10,10,10"
+		//#ifdef OPEN_MARKET_SYSTEM
+		//#endif OPEN_MARKET_SYSTEM
+		WINTER_EVENT_2009			EVENT_ON
+		//EUBUSINESS_EVENT			EVENT_ON
+		//GOLDEN_PIG_FEBRUARY_EVENT	EVENT_ON Open all file
+		//THANKS_GIVING_EVENT		EVENT_ON
+		//LIBERATION_EVENT			EVENT_ON
+		ChristmasEvent2007			1
+	}
+	SR_ShardManager {
+		Certification 				"[SetIP]", 15882
+		BILLING_SERVER_URL 			"http://[SetIP]:[IISPort]/"
+		CREST_FTP_URL 				"ftp://sa:1234@[SetIP]/SRO_CREST"
+		ExtraExpRatio				1000
+		ChristmasEvent2009 			1
+		ChristmasEvent2007			1
+		LOCALE 						LOCALE_ENGLISH
+		FlagEvent					1
+		HourForMeterRateLevelFirst	4
+		HourForMeterRateLevelSecond	24
+		BattleArenaRandom 			1
+		BattleArenaParty 			1
+		BattleArenaGuild 			1
+		BattleArenaJob 				1
+		ArenaMatchOccupy 			1
+		ArenaMatchFlag 				1
+		ArenaMatchPoint 			1
+		SERVER_EVENT_SYSTEM		ON
+	}
+}

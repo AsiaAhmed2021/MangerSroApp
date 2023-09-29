@@ -1,0 +1,4 @@
+[fixes]
+disableDumps = [disableDumps]
+fixRates = [fixRates]
+disableGreenBook = [disableGreenBook]

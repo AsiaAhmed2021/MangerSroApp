@@ -1,0 +1,9 @@
+[global]
+Count = 1
+[entry0]
+id = 335
+operation_type = 22
+name=SRO Vietnam TestLocal
+wip=[SetIP]
+nip=[SetIP]
+machine_manager_node_id = 699

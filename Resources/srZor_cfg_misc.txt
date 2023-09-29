@@ -1,0 +1,8 @@
+[misc]
+disableMsg = [disableMsg]
+disableLog = [disableLog]
+disableBsobjMsgbox=[disableBsobjMsgbox]
+
+[spoof]
+spoofIP = 0
+spoofIPaddr = [SetIP]

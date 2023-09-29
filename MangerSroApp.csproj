@@ -1,0 +1,481 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <StartupObject>MangerSroApp.Program</StartupObject>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <SignAssembly>false</SignAssembly>
+    <ApplicationIcon>Silkroad.ico</ApplicationIcon>
+    <AssemblyName>SROServer</AssemblyName>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Product>Silkroad Offline</Product>
+    <Company>AsiaCoding.eg</Company>
+    <PackageId>IDE SRO_ON_123</PackageId>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>C:\VsroCap100\Vsro.188_cap100_IronSro.v2_package[TheRock2007]\Server Files\</OutputPath>
+    <DocumentationFile></DocumentationFile>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>C:\VsroCap100\Vsro.188_cap100_IronSro.v2_package[TheRock2007]\Server Files\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="%2a%2a\**" />
+    <Compile Remove="Properties\**" />
+    <Compile Remove="ProvenResource\**" />
+    <Compile Remove="Tools\Properties\**" />
+    <Compile Remove="Tools\SilkroadSecurityApi\**" />
+    <EmbeddedResource Remove="%2a%2a\**" />
+    <EmbeddedResource Remove="Properties\**" />
+    <EmbeddedResource Remove="ProvenResource\**" />
+    <EmbeddedResource Remove="Tools\Properties\**" />
+    <EmbeddedResource Remove="Tools\SilkroadSecurityApi\**" />
+    <None Remove="%2a%2a\**" />
+    <None Remove="Properties\**" />
+    <None Remove="ProvenResource\**" />
+    <None Remove="Tools\Properties\**" />
+    <None Remove="Tools\SilkroadSecurityApi\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="%2a%2a/%2a.cs" />
+    <Compile Remove="Tools\Agent.cs" />
+    <Compile Remove="Tools\App.cs" />
+    <Compile Remove="Tools\App.Designer.cs" />
+    <Compile Remove="Tools\Captcha.cs" />
+    <Compile Remove="Tools\extensionsMethod.cs" />
+    <Compile Remove="Tools\Gateway.cs" />
+    <Compile Remove="Tools\Global.cs" />
+    <Compile Remove="Tools\Globals.cs" />
+    <Compile Remove="Tools\Login.cs" />
+    <Compile Remove="Tools\LogsModels.cs" />
+    <Compile Remove="Tools\OpenBots.cs" />
+    <Compile Remove="Tools\Program.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="%2a%2a/%2a.resx" />
+    <EmbeddedResource Remove="Tools\App.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="%2a%2a/%2a" />
+    <None Remove="Icon1.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="ControlUI\AutoEventBotUI.cs" />
+    <Compile Include="ControlUI\AutoEventBotUI.Designer.cs" />
+    <Compile Include="ControlUI\ConfigControl.cs" />
+    <Compile Include="ControlUI\ConfigControl.Designer.cs" />
+    <Compile Include="ControlUI\QueryControl.cs" />
+    <Compile Include="ControlUI\QueryControl.Designer.cs" />
+    <Compile Include="ExtensionsClass\ControllerViews.cs" />
+    <Compile Include="ExtensionsClass\Extensions.cs" />
+    <Compile Include="ExtensionsClass\iisClass.cs" />
+    <Compile Include="ExtensionsClass\LocalIP.cs" />
+    <Compile Include="ExtensionsClass\Logs.cs" />
+    <Compile Include="ExtensionsClass\RarClass.cs" />
+    <Compile Include="ExtensionsClass\SpoofAgentIP.cs" />
+    <Compile Include="ExtensionsClass\SqlHelper.cs" />
+    <Compile Include="ExtensionsClass\srSpoof_patcher.cs" />
+    <Compile Include="Files.Designer.cs" />
+    <Compile Include="Form1.cs" />
+    <Compile Include="Form1.Designer.cs" />
+    <Compile Include="Glabels.cs" />
+    <Compile Include="IamgeMapMiniTest.Designer.cs" />
+    <Compile Include="IIS.Designer.cs" />
+    <Compile Include="MainModels.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ResImage.Designer.cs" />
+    <Compile Include="SQLSETUP.Designer.cs" />
+    <Compile Include="SuppWindow.cs" />
+    <Compile Include="Test.cs" />
+    <Compile Include="Test.Designer.cs" />
+    <Compile Include="Tools\Bot\Agent.cs" />
+    <Compile Include="Tools\Bot\Bot.cs" />
+    <Compile Include="Tools\Bot\BotFun\AddItemToStall.cs" />
+    <Compile Include="Tools\Bot\BotFun\AddParty.cs" />
+    <Compile Include="Tools\Bot\BotFun\CloseStall.cs" />
+    <Compile Include="Tools\Bot\BotFun\CreateStall.cs" />
+    <Compile Include="Tools\Bot\BotFun\dc_user.cs" />
+    <Compile Include="Tools\Bot\BotFun\DorpItems.cs" />
+    <Compile Include="Tools\Bot\BotFun\gmskill.cs" />
+    <Compile Include="Tools\Bot\BotFun\gotown.cs" />
+    <Compile Include="Tools\Bot\BotFun\invincible.cs" />
+    <Compile Include="Tools\Bot\BotFun\invisible.cs" />
+    <Compile Include="Tools\Bot\BotFun\loadmonster.cs" />
+    <Compile Include="Tools\Bot\BotFun\makeitem.cs" />
+    <Compile Include="Tools\Bot\BotFun\movetouser.cs" />
+    <Compile Include="Tools\Bot\BotFun\OpenCape.cs" />
+    <Compile Include="Tools\Bot\BotFun\OpenStall.cs" />
+    <Compile Include="Tools\Bot\BotFun\Private.cs" />
+    <Compile Include="Tools\Bot\BotFun\recallguild.cs" />
+    <Compile Include="Tools\Bot\BotFun\recalluser.cs" />
+    <Compile Include="Tools\Bot\BotFun\send_all.cs" />
+    <Compile Include="Tools\Bot\BotFun\send_global.cs" />
+    <Compile Include="Tools\Bot\BotFun\send_msg.cs" />
+    <Compile Include="Tools\Bot\BotFun\send_notice.cs" />
+    <Compile Include="Tools\Bot\BotFun\send_pm.cs" />
+    <Compile Include="Tools\Bot\BotFun\totown.cs" />
+    <Compile Include="Tools\Bot\BotFun\warp.cs" />
+    <Compile Include="Tools\Bot\Captcha.cs" />
+    <Compile Include="Tools\Bot\ExtensionsMode\ExtensionsBot.cs" />
+    <Compile Include="Tools\Bot\Gateway.cs" />
+    <Compile Include="Tools\Bot\Global.cs" />
+    <Compile Include="Tools\Bot\Login.cs" />
+    <Compile Include="Tools\Bot\Sql.cs" />
+    <Compile Include="Tools\ddjImageConverter\Converter.cs" />
+    <Compile Include="Tools\ddjImageConverter\MainWindow.cs" />
+    <Compile Include="Tools\ddjImageConverter\MainWindow.Designer.cs" />
+    <Compile Include="Tools\Maps\ChangeProperty.cs" />
+    <Compile Include="Tools\Maps\ChangeProperty.Designer.cs" />
+    <Compile Include="Tools\Maps\MapModels.cs" />
+    <Compile Include="Tools\Maps\MapsBlocks.cs" />
+    <Compile Include="Tools\Maps\MapsBlocks.Designer.cs" />
+    <Compile Include="Tools\Maps\Test.cs" />
+    <Compile Include="Tools\Properties\Resources.cs" />
+    <Compile Include="Tools\Properties\Settings.cs" />
+    <Compile Include="Tools\SilkroadLauncher\LauncherSettings.cs" />
+    <Compile Include="Tools\SilkroadLauncher\Main.cs" />
+    <Compile Include="Tools\SilkroadLauncher\Network\Client.cs" />
+    <Compile Include="Tools\SilkroadLauncher\Network\ClientMsgHandler.cs" />
+    <Compile Include="Tools\SilkroadLauncher\Network\DownloadModule.cs" />
+    <Compile Include="Tools\SilkroadLauncher\Network\GatewayModule.cs" />
+    <Compile Include="Tools\SilkroadLauncher\Network\WebNoticeViewModel.cs" />
+    <Compile Include="Tools\SilkroadLauncher\Pk2ReaderAPI\Pk2File.cs" />
+    <Compile Include="Tools\SilkroadLauncher\Pk2ReaderAPI\Pk2Folder.cs" />
+    <Compile Include="Tools\SilkroadLauncher\Pk2ReaderAPI\Pk2Reader.cs" />
+    <Compile Include="Tools\SilkroadLauncher\Pk2WriterAPI\PK2Writer.cs" />
+    <Compile Include="Tools\SilkroadLauncher\SilkroadCommon\Download\FileEntry.cs" />
+    <Compile Include="Tools\SilkroadLauncher\SilkroadCommon\Setting\SROptionSet.cs" />
+    <Compile Include="Tools\SilkroadLauncher\SilkroadCommon\SilkCfg.cs" />
+    <Compile Include="Tools\SilkroadLauncher\SilkroadCommon\WebNotice.cs" />
+    <Compile Include="Tools\SilkroadLauncher\Utility\ExpressionHelpers.cs" />
+    <Compile Include="Tools\SilkroadLauncher\Utility\Pk2ReaderHelpers.cs" />
+    <Compile Include="Tools\SilkroadLauncher\Utility\SocketHelpers.cs" />
+    <Compile Include="Tools\SilkroadLauncher\Utility\TaskHelpers.cs" />
+    <Compile Include="Tools\SilkroadSecurityApi\Blowfish.cs" />
+    <Compile Include="Tools\SilkroadSecurityApi\Packet.cs" />
+    <Compile Include="Tools\SilkroadSecurityApi\PacketReader.cs" />
+    <Compile Include="Tools\SilkroadSecurityApi\PacketWriter.cs" />
+    <Compile Include="Tools\SilkroadSecurityApi\Security.cs" />
+    <Compile Include="Tools\SilkroadSecurityApi\TransferBuffer.cs" />
+    <Compile Include="Tools\SilkroadSecurityApi\Utility.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Silkroad.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="ControlUI\AutoEventBotUI.resx" />
+    <EmbeddedResource Include="ControlUI\ConfigControl.resx" />
+    <EmbeddedResource Include="ControlUI\QueryControl.resx" />
+    <EmbeddedResource Include="Files.resx" />
+    <EmbeddedResource Include="Form1.resx" />
+    <EmbeddedResource Include="IamgeMapMiniTest.resx" />
+    <EmbeddedResource Include="Icon1.ico" />
+    <EmbeddedResource Include="IIS.resx" />
+    <EmbeddedResource Include="ResImage.resx" />
+    <EmbeddedResource Include="SQLSETUP.resx" />
+    <EmbeddedResource Include="SuppWindow.resx" />
+    <EmbeddedResource Include="Test.resx" />
+    <EmbeddedResource Include="Tools\ddjImageConverter\MainWindow.resx" />
+    <EmbeddedResource Include="Tools\Maps\ChangeProperty.resx" />
+    <EmbeddedResource Include="Tools\Maps\MapsBlocks.resx" />
+    <EmbeddedResource Include="Tools\Properties\Resources.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspose.Zip" Version="23.7.0" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.Web.Administration" Version="11.1.0" />
+    <PackageReference Include="System.Data.Odbc" Version="7.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CSharpImageLibrary">
+      <HintPath>..\Image Converter\bin\Debug\CSharpImageLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNet">
+      <HintPath>..\DotNet\bin\Debug\DotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DBToMediaSROFiles_">
+      <HintPath>..\_DBtoMedia_1.7\bin\Debug\DTM.dll</HintPath>
+    </Reference>
+    <Reference Include="GDImageLibrary">
+      <HintPath>..\Image Converter\bin\Debug\GDImageLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="PK2">
+      <HintPath>..\SlimPK2\bin\Debug\PK2.dll</HintPath>
+    </Reference>
+    <Reference Include="Server_Manager">
+      <HintPath>..\Server_Manager\bin\Debug\Server_Manager.dll</HintPath>
+    </Reference>
+    <Reference Include="SroMapEditor">
+      <HintPath>..\Mapeditor_source\bin\dubug\SroMapEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity">
+      <HintPath>..\Image Converter\bin\Debug\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="UsefulThings">
+      <HintPath>..\Image Converter\bin\Debug\UsefulThings.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Files.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Files.resx</DependentUpon>
+    </Compile>
+    <Compile Update="IamgeMapMiniTest.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>IamgeMapMiniTest.resx</DependentUpon>
+    </Compile>
+    <Compile Update="IIS.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>IIS.resx</DependentUpon>
+    </Compile>
+    <Compile Update="ResImage.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ResImage.resx</DependentUpon>
+    </Compile>
+    <Compile Update="SQLSETUP.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SQLSETUP.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Tools\ddjImageConverter\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tools\ddjImageConverter\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Files.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Files.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="IamgeMapMiniTest.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>IamgeMapMiniTest.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="IIS.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>IIS.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ResImage.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResImage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SQLSETUP.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SQLSETUP.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Resources\0.png" />
+    <None Include="Resources\1-1.PNG" />
+    <None Include="Resources\1-2.PNG" />
+    <None Include="Resources\1-3.PNG" />
+    <None Include="Resources\1-4.PNG" />
+    <None Include="Resources\1-5.PNG" />
+    <None Include="Resources\1-6.PNG" />
+    <None Include="Resources\1-7.PNG" />
+    <None Include="Resources\1-8.PNG" />
+    <None Include="Resources\111111111.png" />
+    <None Include="Resources\12323213.png" />
+    <None Include="Resources\126x125.jpg" />
+    <None Include="Resources\126x126.jpg" />
+    <None Include="Resources\126x127.jpg" />
+    <None Include="Resources\126x128.jpg" />
+    <None Include="Resources\126x129.jpg" />
+    <None Include="Resources\126x130.jpg" />
+    <None Include="Resources\126x131.jpg" />
+    <None Include="Resources\126x132.jpg" />
+    <None Include="Resources\14875.gif" />
+    <None Include="Resources\14876.gif" />
+    <None Include="Resources\14877.gif" />
+    <None Include="Resources\14878.gif" />
+    <None Include="Resources\14879.gif" />
+    <None Include="Resources\14880.gif" />
+    <None Include="Resources\14881.gif" />
+    <None Include="Resources\14882.gif" />
+    <None Include="Resources\14883.gif" />
+    <None Include="Resources\14884.gif" />
+    <None Include="Resources\14885.gif" />
+    <None Include="Resources\14886.gif" />
+    <None Include="Resources\14887.gif" />
+    <None Include="Resources\14888.gif" />
+    <None Include="Resources\14889.gif" />
+    <None Include="Resources\14890.gif" />
+    <None Include="Resources\14891.gif" />
+    <None Include="Resources\14892.gif" />
+    <None Include="Resources\14893.gif" />
+    <None Include="Resources\14894.gif" />
+    <None Include="Resources\14895.gif" />
+    <None Include="Resources\14896.gif" />
+    <None Include="Resources\14897.gif" />
+    <None Include="Resources\14898.gif" />
+    <None Include="Resources\14899.gif" />
+    <None Include="Resources\14900.gif" />
+    <None Include="Resources\1907.gif" />
+    <None Include="Resources\1908.gif" />
+    <None Include="Resources\1909.gif" />
+    <None Include="Resources\1910.gif" />
+    <None Include="Resources\1911.gif" />
+    <None Include="Resources\1912.gif" />
+    <None Include="Resources\1913.gif" />
+    <None Include="Resources\1914.gif" />
+    <None Include="Resources\1915.gif" />
+    <None Include="Resources\1916.gif" />
+    <None Include="Resources\1917.gif" />
+    <None Include="Resources\1918.gif" />
+    <None Include="Resources\1919.gif" />
+    <None Include="Resources\1920.gif" />
+    <None Include="Resources\1921.gif" />
+    <None Include="Resources\1922.gif" />
+    <None Include="Resources\1923.gif" />
+    <None Include="Resources\1924.gif" />
+    <None Include="Resources\1925.gif" />
+    <None Include="Resources\1926.gif" />
+    <None Include="Resources\1927.gif" />
+    <None Include="Resources\1928.gif" />
+    <None Include="Resources\1929.gif" />
+    <None Include="Resources\1930.gif" />
+    <None Include="Resources\1931.gif" />
+    <None Include="Resources\1932.gif" />
+    <None Include="Resources\2-1.PNG" />
+    <None Include="Resources\2-2.PNG" />
+    <None Include="Resources\2-3.PNG" />
+    <None Include="Resources\2-4.PNG" />
+    <None Include="Resources\2-5.PNG" />
+    <None Include="Resources\2-6.PNG" />
+    <None Include="Resources\2-7.PNG" />
+    <None Include="Resources\2-8.PNG" />
+    <None Include="Resources\26x37.png" />
+    <None Include="Resources\26x38.png" />
+    <None Include="Resources\26x39.png" />
+    <None Include="Resources\26x40.png" />
+    <None Include="Resources\26x41.png" />
+    <None Include="Resources\26x42.png" />
+    <None Include="Resources\26x43.png" />
+    <None Include="Resources\26x44.png" />
+    <None Include="Resources\26x45.png" />
+    <None Include="Resources\26x46.png" />
+    <None Include="Resources\26x47.png" />
+    <None Include="Resources\26x48.png" />
+    <None Include="Resources\26x49.png" />
+    <None Include="Resources\26x50.png" />
+    <None Include="Resources\26x51.png" />
+    <None Include="Resources\26x52.png" />
+    <None Include="Resources\26x53.png" />
+    <None Include="Resources\3-1.PNG" />
+    <None Include="Resources\3-2.PNG" />
+    <None Include="Resources\3-3.PNG" />
+    <None Include="Resources\3-4.PNG" />
+    <None Include="Resources\3-5.PNG" />
+    <None Include="Resources\3-6.PNG" />
+    <None Include="Resources\3-7.PNG" />
+    <None Include="Resources\3-8.PNG" />
+    <None Include="Resources\300px-Guild.png" />
+    <None Include="Resources\300px-Guild1.png" />
+    <None Include="Resources\3a628ad4b5737681af41c6b2208eb0.png" />
+    <None Include="Resources\4-1.PNG" />
+    <None Include="Resources\4-2.PNG" />
+    <None Include="Resources\4-3.PNG" />
+    <None Include="Resources\4-4.PNG" />
+    <None Include="Resources\4-5.PNG" />
+    <None Include="Resources\4-6.PNG" />
+    <None Include="Resources\4-7.PNG" />
+    <None Include="Resources\4-8.PNG" />
+    <None Include="Resources\A11.png" />
+    <None Include="Resources\Batch File Commands.png" />
+    <None Include="Resources\billing_serverstate.asp" />
+    <None Include="Resources\billing_serverstate_bk.asp" />
+    <None Include="Resources\billing_silkconsume.asp" />
+    <None Include="Resources\billing_silkdatacall.asp" />
+    <None Include="Resources\Book View.png" />
+    <None Include="Resources\chat.png" />
+    <None Include="Resources\Class_MD5.asp" />
+    <None Include="Resources\CustomCertification_ini_Server IP.txt" />
+    <None Include="Resources\CustomCertification_ini_srNodeType.txt" />
+    <None Include="Resources\CustomCertification_ini_srShard.txt" />
+    <None Include="Resources\database-with-broom.png" />
+    <None Include="Resources\DBConnect.asp" />
+    <None Include="Resources\DBConnect.txt" />
+    <None Include="Resources\Dev.png" />
+    <None Include="Resources\Dev1.png" />
+    <None Include="Resources\edit-group.png" />
+    <None Include="Resources\ezgif.com-crop.gif" />
+    <None Include="Resources\face.png" />
+    <None Include="Resources\face1.png" />
+    <None Include="Resources\Function.asp" />
+    <None Include="Resources\GetTotalSilk.asp" />
+    <None Include="Resources\GTA-V-Logo.png" />
+    <None Include="Resources\icons8_save_127px_2.png" />
+    <None Include="Resources\icons8_save_127px_21.png" />
+    <None Include="Resources\icon_cogs.png" />
+    <None Include="Resources\icon_cogs1.png" />
+    <None Include="Resources\incoming-mail-2.png" />
+    <None Include="Resources\kpi-icons-04-320x320.png" />
+    <None Include="Resources\levebag_by_akirawr-d6pqlhf.png" />
+    <None Include="Resources\loading.gif" />
+    <None Include="Resources\loading1.gif" />
+    <None Include="Resources\loadingImg.gif" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\Logo2.png" />
+    <None Include="Resources\logo_login2.png" />
+    <None Include="Resources\Oriental_fortress.png" />
+    <None Include="Resources\PurchaseSilk.asp" />
+    <None Include="Resources\Refresh.png" />
+    <None Include="Resources\RefundSilk.asp" />
+    <None Include="Resources\repair.png" />
+    <None Include="Resources\RiGy5xLoT.png" />
+    <None Include="Resources\Sea_Monster_-_2007_TMNT_film.png" />
+    <None Include="Resources\ServerFile.txt" />
+    <None Include="Resources\ServiceManager.txt" />
+    <None Include="Resources\settingINI.txt" />
+    <None Include="Resources\sign-up.png" />
+    <None Include="Resources\siparis.png" />
+    <None Include="Resources\SMC_ServiceManager.txt" />
+    <None Include="Resources\SMC_smc_updater.txt" />
+    <None Include="Resources\spin.gif" />
+    <None Include="Resources\SQL_LOGIN.txt" />
+    <None Include="Resources\srZor_cfg_common.txt" />
+    <None Include="Resources\srZor_cfg_fixes.txt" />
+    <None Include="Resources\srZor_cfg_misc.txt" />
+    <None Include="Resources\srZor_cfg_query.txt" />
+    <None Include="Resources\srZor_cfg_sql.txt" />
+    <None Include="Resources\srZor_cfg_unique.txt" />
+    <None Include="Resources\srZor_sql.txt" />
+    <None Include="Resources\StrBackupDatabsae.txt" />
+    <None Include="Resources\SystemJsonDef.txt" />
+    <None Include="Resources\teamwork_pie_chart.png" />
+    <None Include="Resources\test.asp" />
+    <None Include="Resources\Untitled-11.png" />
+    <None Include="Resources\usertype.png" />
+    <None Include="Resources\user_edit-512.png" />
+    <None Include="Resources\vSro Multi Tool.png" />
+    <None Include="Resources\Wel.png" />
+    <None Include="Resources\zolotie_monetki.png" />
+  </ItemGroup>
+
+</Project>
